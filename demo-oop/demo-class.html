@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function prisoner(id, name, crimee) {
+        this.id = id;
+        this.name = name;
+        this.crimee = crimee;
+        this.infor = function () {
+            return "ID : " + this.id + '<br>' + "Name : " + this.name + '<br>' + "Crime :" + this.crimee
+        }
+
+    }
+    let prosioner1 = new prisoner(1,"Tokuda","killing")
+    document.write(prosioner1.infor())
+</script>
+</body>
+</html>
