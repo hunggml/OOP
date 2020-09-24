@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function Temperature(C) {
+    this.C = C;
+    this.getC  = function () {
+        return this.C;
+    }
+    this.setC = function (C){
+        this.C = C;
+    }
+    this.setCtoF = function () {
+        return (9/5)*this.C + 32;
+    }
+    this.setCtoK = function () {
+        return this.C + 273;
+    }
+
+}
+let temper = new Temperature(25);
+let CtoF = temper.setCtoF();
+let CtoK = temper.setCtoK();
+document.write('C=25' + '<br>'+'C -> F :' + CtoF + '<br>' + 'C -> K :' + CtoK)
+</script>
+</body>
+</html>

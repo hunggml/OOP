@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mobile(id, name) {
+        this.id = id;
+        this.name = name;
+        this.mess = "";
+        this.setMess = function (mess) {
+            this.mess = mess;
+
+        }
+        this.getMess = function (){
+            return this.mess;
+        }
+        this.sendMobile = function (mess,moblie){
+            moblie.setMess(mess)
+        }
+    }
+    let Iphone = new Mobile(1,"Iphone");
+    let Androi = new Mobile(2,"Androi");
+    Iphone.sendMobile("Hello Bitch!" , Androi);
+    let mess = Androi.getMess();
+    document.write(mess )
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCan" width="500px" height="400px" style="border: 1px solid black"></canvas>
+<script>
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.getWidth = function () {
+            return this.width;
+        }
+        this.getHeigth = function () {
+            return this.height
+        }
+        this.setWidth = function () {
+            this.width = width
+        }
+        this.setHeight = function () {
+            this.height = height
+        }
+        this.getS = function () {
+            return (this.width * this.height)
+        }
+        this.getCV = function () {
+            return (this.width+this.height)*2
+
+        }
+        let srcan = document.getElementById('myCan').getContext('2d');
+        srcan.rect(100,100,this.width,this.height)
+        srcan.stroke()
+    }
+
+
+    let rectangle = new Rectangle(250,120);
+    let S = rectangle.getS();
+    let CV = rectangle.getCV();
+    document.write( '<br>'+ 'S = ' + S +'<br>' + "CV = " + CV)
+
+
+</script>
+</body>
+</html>
